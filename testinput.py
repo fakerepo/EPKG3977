@@ -48,7 +48,7 @@ class RetriesExhaustedError(Exception):
     pass
 
 class InvalidCredentialsError(Exception):
-    """Raised when invalid credentials have been provided."""
+    """Raised when invalid credentials have been provided.adding more lines here to increase the line lenght to go above the limit to get pylint errors. More random input for making sure"""
     pass
 
 class ServerDownOrUnreachableError(Exception):
@@ -90,7 +90,10 @@ class RisObject(dict):
         :type value: data type
         :returns: returns parsed value
         """
-        if isinstance(value, dict):
+        unused = 1
+	unused2 = 2
+	unused3 = 4
+	if isinstance(value, dict):
             return cls(value)
         elif isinstance(value, list):
             return [cls.parse(i) for i in value]
